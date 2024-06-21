@@ -2,18 +2,21 @@ import Image from "next/image";
 import Logo from "@/images/Screenshot 2024-06-21 182323.png"
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import StoryWriter from "@/components/StoryWriter";
 
 
 export default function Home() {
   return (
-    <main className="">
-      <section>
-        <div>
-          <Image src={Logo} height={250} width={240} alt={"Lgo"} className="rounded-md"/>
-          <Button asChild className="px-20 bg-sky-500">
+    <main className="flex-1 flex flex-col">
+      <section className="flex-1 grid grid-cols-1 lg:grid-cols-2">
+        <div className="bg-sky-500  flex flex-col  space-y-5 justify-center items-center order-1 lg:-order-1 pb-10">
+          <Image src={Logo} height={250} width={240} alt={"Lgo"} className="rounded-md mt-10"/>
+          <Button asChild className="px-20 bg-sky-500 p-10 text-xl hover:bg-sky-400">
             <Link href="/stories"> Explore Story Library </Link>
           </Button>
         </div>
+
+        <StoryWriter />
 
       </section>
     </main>
