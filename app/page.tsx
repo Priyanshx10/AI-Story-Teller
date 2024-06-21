@@ -9,8 +9,8 @@ export default function Home() {
     <main className="">
       <section>
         <div>
-          <Image src={Logo} height={250} width={240} alt={"Lgo"}/>
-          <Button>
+          <Image src={Logo} height={250} width={240} alt={"Lgo"} className="rounded-md"/>
+          <Button asChild className="px-20 bg-sky-500">
             <Link href="/stories"> Explore Story Library </Link>
           </Button>
         </div>
